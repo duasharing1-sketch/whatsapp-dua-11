@@ -1,32 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Share Du'a on WhatsApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dua 11 - Dua Sharing</title>
 </head>
 <body>
-<a id="manualLink" href="#" target="_blank" style="display:none;">Open WhatsApp</a>
+  <a id="manualLink" href="#" target="_blank" style="display:none;">Open WhatsApp</a>
 
-<script>
-const encodedText = "*Do%20you%20long%20for%20the%20love%20of%20Rasulullah%20%E2%9C%8D%EF%B8%8F*%0A%0AThis%20powerful%20du%E2%80%99a%20calls%20upon%20Al-Wad%C5%ABd%20(The%20Most%20Loving)%20to%20grant%20us%20a%20special%2C%20intimate%20bond%20with%20the%20beloved%20of%20Allah%20%E2%80%94%20Rasulullah%20%E2%9C%8D%EF%B8%8F.%20A%20love%20so%20deep%20that%20our%20names%20remain%20present%20within%20his%20noble%20heart%2C%20and%20his%20blessed%20gaze%20always%20rests%20upon%20us.%0A%0ABecause%20to%20be%20granted%20the%20gift%20of%20loving%20him%20%E2%9C%8D%EF%B8%8F%20and%20to%20be%20loved%20by%20him%20%E2%9C%8D%EF%B8%8F%20is%20one%20of%20the%20greatest%20honors.%0A%0AAs%20stated%20in%20an%20authentic%20hadith%2C%20Rasulullah%20%E2%9C%8D%EF%B8%8F%20said%3A%0A%0A%E2%80%9CA%20person%20will%20be%20with%20those%20whom%20he%20loves.%E2%80%9D%20%E2%80%94%20(Bukhari)%0A%0A*Ya%20Allah%20(O%20Allah)%2C%20Ya%20Wadud%20(O%20Most%20Loving)%2C%20grant%20us%20an%20immense%20and%20special%20love%20from%20Your%20most%20beloved%2C%20Habeebullah%2C%20Khayr-ul-Khalqillah%2C%20Khatam-ul-Anbiya%2C%20Sayyidina%20Muhammad%20Rasoolullah%20Sallallahu%20Alayhi%20Wasallam.%20A%20love%20so%20profound%20that%20each%20of%20our%20names%20is%20permanently%20present%20within%20his%20pure%20and%20perfected%20heart%2C%20and%20that%20his%20Nazar%20(his%20loving%20gaze)%20remains%20upon%20us%20at%20all%20times.*%0A%0AThis%20du'a%20is%20part%20of%20*The%20Supplication%20of%20Infinite%20Blessings*%20%E2%80%94%20a%20powerful%20collection%20of%20heartfelt%20supplications%20designed%20to%20benefit%20you%20in%20both%20this%20life%20and%20the%20next.%0A%0A*At%20Dua%20Sharing%2C%20our%20mission%20is%20simple*%3A%20%0ATo%20encourage%20sincere%20du'a%2C%20meaningful%20sharing%2C%20and%20to%20multiply%20blessings%20through%20a%20growing%20global%20chain%20of%20people%20making%20dua%20for%20one%20another%20every%20single%20day.%0A%0AAs%20Rasulullah%20%E2%9C%8D%EF%B8%8F%20said%3A%20%0A%0A%E2%80%9CThe%20supplication%20of%20a%20Muslim%20for%20his%20brother%20in%20his%20absence%20will%20certainly%20be%20answered.%20Every%20time%20he%20makes%20a%20supplication%20for%20good%20for%20his%20brother%2C%20the%20angel%20appointed%20for%20this%20task%20says%3A%20%E2%80%98Ameen!%20And%20may%20it%20be%20for%20you%20too.%E2%80%9D%0A%0AEvery%20post%20we%20share%20is%20taken%20directly%20from%20the%20full%20Supplication%20of%20Infinite%20Blessings%20%E2%80%94%20with%20the%20aim%20of%20moving%20hearts%2C%20inspiring%20action%2C%20and%20reminding%20us%20all%20of%20what%20truly%20matters.%0A%0AAccess%20the%20full%20supplication%20in%20both%20English%20and%20Arabic%20at%3A%20https%3A%2F%2Fwww.duasharing.com%0A%0AWhen%20you%20share%20this%20post%2C%20you%E2%80%99re%20not%20simply%20sharing%20a%20dua.%20You%E2%80%99re%20opening%20the%20door%20to%20millions%20of%20people%20making%20sincere%20du'a%20for%20you%20%E2%80%94%20with%20the%20Malaika%20(Angels)%20themselves%20saying%20%E2%80%9CAmeen%E2%80%9D%20to%20every%20single%20one.%0A%0AMay%20Allah%20accept%20it%20from%20you%2C%20and%20from%20everyone%20it%20reaches%20through%20you.%0A%0AAmeen";
+  <script>
+    const message = `*Do you long for the love of Rasulullah ﷺ*
 
-const waProtocol = "whatsapp://send?text=" + encodedText;
-const waWeb = "https://wa.me/?text=" + encodedText;
+This powerful dua calls upon Al-Wadūd (The Most Loving) to grant us a special, intimate bond with the beloved of Allah — Rasulullah ﷺ. A love so deep that our names remain present within his noble heart, and his blessed gaze always rests upon us.
 
-const manualLink = document.getElementById('manualLink');
-manualLink.href = waWeb;
+Because to be granted the gift of loving him ﷺ and to be loved by him ﷺ is one of the greatest honors.
 
-async function tryShare() {
-  if (navigator.share) {
-    try { await navigator.share({ text: decodeURIComponent(encodedText) }); return; }
-    catch (err) { console.warn(err); }
-  }
-  try { window.location.href = waProtocol; setTimeout(() => { window.location.href = waWeb; }, 1200); }
-  catch (e) { window.location.href = waWeb; }
-}
+As stated in an authentic hadith, Rasulullah ﷺ said:
 
-window.addEventListener('load', tryShare);
-</script>
+“A person will be with those whom he loves.” — (Bukhari)
+
+*Ya Allah (O Allah), Ya Wadud (O Most Loving), grant us an immense and special love from Your most beloved, Habeebullah, Khayr-ul-Khalqillah, Khatam-ul-Anbiya, Sayyidina Muhammad Rasoolullah Sallallahu Alayhi Wasallam. A love so profound that each of our names is permanently present within his pure and perfected heart, and that his Nazar (his loving gaze) remains upon us at all times.*
+
+This dua is part of *The Supplication of Infinite Blessings* — a powerful collection of heartfelt supplications designed to benefit you in both this life and the next. 
+
+*At Dua Sharing, our mission is simple*: 
+
+To encourage sincere dua, meaningful sharing, and to multiply blessings through a growing global chain of people making dua for one another every single day.
+
+As Rasulullah ﷺ said: 
+
+“The supplication of a Muslim for his brother in his absence will certainly be answered. Every time he makes a supplication for good for his brother, the angel appointed for this task says: ‘Ameen! And may it be for you too.”
+
+Every post we share is taken directly from the full Supplication of Infinite Blessings — with the aim of moving hearts, inspiring action, and reminding us all of what truly matters.
+
+Access the full supplication in both English and Arabic at: https://www.duasharing.com
+
+When you share this post, you’re not simply sharing a dua. You’re opening the door to millions of people making sincere dua for you — with the Malaika (Angels) themselves saying “Ameen” to every single one.
+
+May Allah accept it from you, and from everyone it reaches through you.
+
+Ameen`;
+
+    const fallbacks = {
+      'ﷻ': 'ﷻ (may His Majesty be exalted)',
+      'ﷺ': 'ﷺ (peace be upon him)'
+    };
+
+    let messageWithFallback = message;
+    for (const [symbol, replacement] of Object.entries(fallbacks)) {
+      messageWithFallback = messageWithFallback.replace(new RegExp(symbol, 'g'), replacement);
+    }
+
+    const encodedText = encodeURIComponent(messageWithFallback);
+    const waProtocol = "whatsapp://send?text=" + encodedText;
+    const waWeb = "https://wa.me/?text=" + encodedText;
+
+    const manualLink = document.getElementById('manualLink');
+    manualLink.href = waWeb;
+
+    async function tryShare() {
+      try {
+        if (navigator.share) {
+          await navigator.share({ text: messageWithFallback });
+        } else {
+          window.location.href = waProtocol;
+          setTimeout(() => { window.location.href = waWeb; }, 1200);
+        }
+      } catch (err) {
+        window.location.href = waWeb;
+      }
+    }
+
+    window.addEventListener('load', tryShare);
+  </script>
 </body>
 </html>
